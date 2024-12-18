@@ -27,12 +27,13 @@ int main() {
     const int max_iterations = 500;
 
     // Set initial shader uniforms
-    shader.setUniform("resolution", sf::Glsl::Vec2(WIDTH, HEIGHT));
     shader.setUniform("x_min", static_cast<float>(x_min));
     shader.setUniform("x_max", static_cast<float>(x_max));
     shader.setUniform("y_min", static_cast<float>(y_min));
     shader.setUniform("y_max", static_cast<float>(y_max));
+    shader.setUniform("resolution", sf::Glsl::Vec2(WIDTH, HEIGHT));
     shader.setUniform("max_iterations", max_iterations);
+
 
     while (window.isOpen()) {
         sf::Event event;
